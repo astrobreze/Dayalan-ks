@@ -1,0 +1,6 @@
+{
+  "name": "ASTROBREEZE - Vedic & KP Astrology Consultancy",
+  "description": "Authentic Vedic and KP Astrology consultancy by Master Astrologer Dhayalan K S featuring Janam Kundli diagnostics, 36 Guna Milan & Porutham calculator, and sacred remedial guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
