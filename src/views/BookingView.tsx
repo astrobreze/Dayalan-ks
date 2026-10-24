@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavPage, SessionTier, BookingFormData } from '../types';
 import { ASSETS, CONTACT_INFO } from '../constants';
+import { GoogleMeetScheduler } from '../components/GoogleMeetScheduler';
 
 interface BookingViewProps {
   onNavigate: (page: NavPage) => void;
@@ -556,6 +557,17 @@ export const BookingView: React.FC<BookingViewProps> = ({ onNavigate }) => {
                 </div>
               </div>
             </div>
+
+            {/* Google Meet Official 1P Video Sanctuary Scheduler */}
+            <GoogleMeetScheduler 
+              sessionTitle={
+                selectedTier === 'comprehensive' 
+                  ? 'Comprehensive 1-on-1 Video Session (60 Mins)' 
+                  : selectedTier === 'express'
+                  ? 'Express Consultation Audio/Video Room'
+                  : 'Astrological Diagnostic Video Meeting'
+              } 
+            />
 
             {/* Astrologer Profile & Credential Authority Card */}
             <div className="bg-[#1c1f2a] p-5 rounded-xl space-y-3 border border-[#4d4635]/30">

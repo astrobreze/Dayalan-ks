@@ -89,21 +89,26 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
 
           <button
             onClick={() => handleNav('book-consultation')}
-            className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-[#f2ca50] text-[#3c2f00] font-semibold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(212,175,55,0.25)] hover:bg-[#d4af37] transition-all cursor-pointer"
+            title="Launch Google Meet Sanctuary"
+            className="hidden lg:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-[#171b26] text-[#dfe2f1] hover:text-[#f2ca50] hover:bg-[#262a35] border border-[#4d4635]/40 text-xs font-semibold uppercase tracking-wider transition-all cursor-pointer"
+          >
+            <span className="material-symbols-outlined text-base text-[#f2ca50]">video_camera_front</span>
+            <span>Google Meet</span>
+          </button>
+
+          <button
+            onClick={() => handleNav('book-consultation')}
+            className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#f2ca50] text-[#3c2f00] font-semibold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(212,175,55,0.25)] hover:bg-[#d4af37] transition-all cursor-pointer"
           >
             Book Consultation
           </button>
 
           <button
             onClick={() => handleNav('about-dhayalan-k-s')}
-            title="Master Astrologer Dhayalan K S Profile"
-            className="flex items-center gap-1.5 pl-1 cursor-pointer focus:outline-none"
+            title="About Dhayalan K S"
+            className="w-8 h-8 rounded-full bg-[#1c1f2a] border border-[#f2ca50]/40 flex items-center justify-center text-[#f2ca50] hover:bg-[#262a35] transition-colors cursor-pointer"
           >
-            <img 
-              alt="Dhayalan K S" 
-              className="w-8 h-8 rounded-full object-cover border border-[#f2ca50]/40 shadow-sm" 
-              src={ASSETS.dhayalanHero} 
-            />
+            <span className="font-serif text-sm font-bold">ॐ</span>
           </button>
 
           {/* Mobile Menu Hamburger */}

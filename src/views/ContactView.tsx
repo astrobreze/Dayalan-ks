@@ -280,10 +280,17 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 flex flex-col gap-2">
+                <button
+                  onClick={() => onNavigate('book-consultation')}
+                  className="w-full py-3 rounded-lg bg-[#f2ca50] text-[#3c2f00] font-bold text-xs uppercase tracking-wider hover:bg-[#d4af37] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                >
+                  <span className="material-symbols-outlined text-base">video_camera_front</span>
+                  Schedule Google Meet Video Reading
+                </button>
                 <button
                   onClick={() => onNavigate('kundli-calculator')}
-                  className="w-full py-3 rounded-lg bg-[#262a35] text-[#dfe2f1] hover:text-[#f2ca50] text-xs font-semibold uppercase tracking-wider border border-[#4d4635]/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 rounded-lg bg-[#262a35] text-[#dfe2f1] hover:text-[#f2ca50] text-xs font-semibold uppercase tracking-wider border border-[#4d4635]/40 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span className="material-symbols-outlined text-base text-[#f2ca50]">calculate</span>
                   Try Free Kundli Matching Calculator

@@ -80,16 +80,43 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
                   </svg>
                 </div>
 
-                {/* Portrait Presentation Frame */}
+                {/* Sacred Celestial Mandala Emblem Frame */}
                 <div className="relative p-2.5 bg-gradient-to-b from-[#f2ca50]/30 via-[#d4af37]/10 to-[#262a35] rounded-full shadow-2xl">
-                  <div className="relative rounded-full overflow-hidden bg-[#262a35] aspect-square">
-                    <img
-                      alt="Distinguished portrait of Indian astrologer Dhayalan K S in traditional silk attire"
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      src={ASSETS.dhayalanHero}
-                    />
-                    {/* Subtle Golden Vignette */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f131d]/80 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="relative rounded-full overflow-hidden bg-[#171b26] aspect-square flex items-center justify-center border border-[#f2ca50]/40">
+                    <div className="w-full h-full p-8 flex flex-col items-center justify-center text-center relative select-none">
+                      <div className="absolute inset-0 bg-gradient-to-tr from-[#f2ca50]/10 via-[#6001d1]/15 to-transparent"></div>
+                      <svg className="w-48 h-48 text-[#f2ca50]" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="92" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
+                        <circle cx="100" cy="100" r="78" stroke="currentColor" strokeWidth="1" opacity="0.8" />
+                        <circle cx="100" cy="100" r="62" stroke="currentColor" strokeWidth="1.5" />
+                        {/* 12 House Radiation Lines */}
+                        {Array.from({ length: 12 }).map((_, i) => (
+                          <line
+                            key={i}
+                            x1="100"
+                            y1="22"
+                            x2="100"
+                            y2="34"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            transform={`rotate(${i * 30} 100 100)`}
+                          />
+                        ))}
+                        {/* Satkona Sacred Hexagram */}
+                        <polygon points="100,42 148,124 52,124" stroke="currentColor" strokeWidth="1.5" opacity="0.9" />
+                        <polygon points="100,158 148,76 52,76" stroke="currentColor" strokeWidth="1.5" opacity="0.9" />
+                        <circle cx="100" cy="100" r="28" fill="#0f131d" stroke="currentColor" strokeWidth="1.5" />
+                        <text x="100" y="108" fill="#f2ca50" fontSize="24" fontFamily="'Playfair Display', Georgia, serif" textAnchor="middle">
+                          ॐ
+                        </text>
+                      </svg>
+                      <span className="font-serif text-sm font-semibold text-[#f2ca50] tracking-wider mt-1 z-10">
+                        ASTROBREEZE
+                      </span>
+                      <span className="text-[10px] uppercase tracking-widest text-[#d0c5af] z-10">
+                        Vedic & KP Precision
+                      </span>
+                    </div>
                   </div>
 
                   {/* Overlaid Sacred Crest Badge */}
